@@ -25,7 +25,7 @@ export const Header = () => {
         <div className='header'>
            <div className="header_left">
            <MenuIcon/>
-           <Link to="/">
+           <Link to="/youtube-clone">
            <img 
             ref={logo}
             id="ll"
