@@ -8,9 +8,18 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar } from '@mui/material';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useRef } from 'react';
 //es7 snippette
 export const Header = () => {
     const [inputsearch,setInputsearch]=useState('');
+    const logo = useRef('');
+    useEffect(() => {
+    
+    logo.current.click()
+    
+    }, [])
+    
     
     return (
         <div className='header'>
@@ -18,6 +27,8 @@ export const Header = () => {
            <MenuIcon/>
            <Link to="/">
            <img 
+            ref={logo}
+            id="ll"
             className='header_logo'
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAozLqGUSYG7kk22-0PVVUhjBiq7jGc0mSZzIIaALmLoCM4W8KxjTAvoUY0Qn1sW1UONQ&usqp=CAU" alt=""/>
            </Link>
